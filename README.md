@@ -1,3 +1,3 @@
-# Call of Duty 4 Server Dashboard
+# Call of Duty 4 Server Dashboard [![Build Status](https://travis-ci.com/livingston/cod4-server-dashboard.svg?branch=master)](https://travis-ci.com/livingston/cod4-server-dashboard) [![Coverage Status](https://coveralls.io/repos/github/livingston/cod4-server-dashboard/badge.svg?branch=master)](https://coveralls.io/github/livingston/cod4-server-dashboard?branch=master)
 
 Parses the `serverstatus.xml` and displays the server, game and player stats on a dashboard.
