@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{index .Game "sv_hostname"}} – {{.Title}}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/main.css">
+
+    <script src="//use.edgefonts.net/arvo;pt-mono.js"></script>
+</head>
+<body>
+    <h1>{{.Server.FormattedName}}</h1>
+
+    {{ range $teamId, $team := .Server.Teams }}
+        <div class="team {{$teamId}}">
+            <h2>{{$team.TeamName}}</h2>
+            <ul class="players">
+            {{ range $team.Players }}
+                <li>{{.Name}} – {{.Rank}} ({{.RankText}}) – {{.GUID}}</li>
+            {{ end }}
+            </ul>
+        </div>
+    {{ end }}
+</body>
+</html>

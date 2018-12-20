@@ -1,0 +1,23 @@
+body {
+    background: #0a0e14;
+    color: #c5c5c5;
+    font-size: 14px;
+
+    font-family: arvo, serif;
+
+    height: 100vh;
+    /* display: flex; */
+
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.players {
+    font-family: pt-mono, monospace;
+}
