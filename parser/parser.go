@@ -12,36 +12,38 @@ import (
 	"golang.org/x/net/html/charset"
 )
 
+// Server properties
 type Server struct {
 	XMLName       xml.Name `xml:"B3Status"`
-	Game          MetaData `xml:"Game"`
+	Game          metaData `xml:"Game"`
 	Time          string   `xml:"Time,attr"`
 	Players       []Player `xml:"Clients>Client"`
 	FormattedName template.HTML
-	Teams         map[int]*Team
+	Teams         map[int]*team
 }
 
-type MetaData struct {
+type metaData struct {
 	XMLName  xml.Name    `xml:"Game"`
-	MetaData []MetaDatum `xml:"Data"`
+	MetaData []metaDatum `xml:"Data"`
 }
 
-type MetaDatum struct {
+type metaDatum struct {
 	XMLName xml.Name `xml:"Data"`
 	Key     string   `xml:"Name,attr"`
 	Value   string   `xml:"Value,attr"`
 }
 
-type Team struct {
+type team struct {
 	TeamName template.HTML
 	Players  map[int]*Player
 }
 
+// Player properties
 type Player struct {
 	XMLName  xml.Name `xml:"Client"`
-	Id       int      `xml:"CID,attr"`
+	ID       int      `xml:"CID,attr"`
 	Name     string   `xml:"ColorName,attr"`
-	Ip       string   `xml:"IP,attr"`
+	IP       string   `xml:"IP,attr"`
 	GUID     string   `xml:"PBID,attr"`
 	Score    int      `xml:"Score,attr"`
 	Kills    int      `xml:"Kills,attr"`
@@ -55,10 +57,12 @@ type Player struct {
 	Updated  string   `xml:"Updated,attr"`
 }
 
+// RankText - returns the player's rank title
 func (p Player) RankText() string {
 	return utils.GetRankText(p.Rank)
 }
 
+// Parse the serverstatus.xml file
 func Parse(file string) (map[string]string, Server, error) {
 	var server Server
 
@@ -89,7 +93,7 @@ func Parse(file string) (map[string]string, Server, error) {
 		parsedData[server.Game.MetaData[i].Key] = server.Game.MetaData[i].Value
 	}
 
-	server.Teams = make(map[int]*Team)
+	server.Teams = make(map[int]*team)
 
 	for _, player := range server.Players {
 		switch player.TeamName {
@@ -104,13 +108,13 @@ func Parse(file string) (map[string]string, Server, error) {
 
 		_, f := server.Teams[player.Team]
 		if !f {
-			server.Teams[player.Team] = &Team{}
+			server.Teams[player.Team] = &team{}
 			server.Teams[player.Team].TeamName = template.HTML(utils.Colorize(player.TeamName))
 			server.Teams[player.Team].Players = make(map[int]*Player)
 		}
 
 		currentPlayer := player
-		server.Teams[player.Team].Players[player.Id] = &currentPlayer
+		server.Teams[player.Team].Players[player.ID] = &currentPlayer
 	}
 
 	server.FormattedName = template.HTML(utils.Colorize(parsedData["sv_hostname"]))

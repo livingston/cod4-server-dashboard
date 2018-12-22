@@ -5,12 +5,12 @@ import (
 	"strconv"
 )
 
-type Color struct {
+type color struct {
 	Name string
 	Hex  string
 }
 
-var Colors = []Color{
+var colors = []color{
 	{"black", "#777777"},
 	{"red", "#F65A5A"},
 	{"green", "#00F100"},
@@ -25,7 +25,7 @@ var Colors = []Color{
 
 var matchAllColorCodes = regexp.MustCompile(`(\^\d)`)
 
-var Ranks = map[int]string{
+var ranks = map[int]string{
 	1:  "Private First Class",
 	2:  "Private First Class I",
 	3:  "Private First Class II",
@@ -92,10 +92,11 @@ func getRegexpsFor(i int) (*regexp.Regexp, *regexp.Regexp) {
 	return regexp.MustCompile(replaceColorCode), regexp.MustCompile(cleanup)
 }
 
+// Colorize converts the game color codes into HTML colors
 func Colorize(s string) string {
 	result := s
 
-	for i, color := range Colors {
+	for i, color := range colors {
 		colorRegexp, cleanupRegexp := getRegexpsFor(i)
 		result = colorRegexp.ReplaceAllString(result, "<span style='color:"+color.Hex+";'>$1</span>$2")
 		result = cleanupRegexp.ReplaceAllString(result, "")
@@ -104,16 +105,18 @@ func Colorize(s string) string {
 	return result
 }
 
+// StripFormat removes all the color formatting
 func StripFormat(s string) string {
 	result := matchAllColorCodes.ReplaceAllString(s, "")
 
 	return result
 }
 
+// GetRankText returns the title for the corresponding rank
 func GetRankText(rank int) string {
-	if rankText, ok := Ranks[rank]; ok {
+	if rankText, ok := ranks[rank]; ok {
 		return rankText
-	} else {
-		return "Unknown"
 	}
+
+	return "Unknown"
 }

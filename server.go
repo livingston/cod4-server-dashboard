@@ -12,7 +12,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-type Dashboard struct {
+type dashboard struct {
 	Title  string
 	Game   map[string]string
 	Server parser.Server
@@ -36,7 +36,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		os.Exit(1)
 	}
 
-	data := Dashboard{
+	data := dashboard{
 		Title:  "Dashboard",
 		Game:   game,
 		Server: server,
