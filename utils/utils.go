@@ -7,34 +7,34 @@ import (
 
 type Color struct {
 	Name string
-	Hex string
+	Hex  string
 }
 
 var Colors = []Color{
-	Color{"black",   "#777777"},
-	Color{"red",     "#F65A5A"},
-	Color{"green",   "#00F100"},
-	Color{"yellow",  "#EFEE04"},
-	Color{"blue",    "#0F04E8"},
-	Color{"cyan",    "#04E8E7"},
-	Color{"magenta", "#F75AF6"},
-	Color{"white",   "#FFFFFF"},
-	Color{"gray",    "#7E7E7E"},
-	Color{"brown",   "#6E3C3C"},
+	{"black", "#777777"},
+	{"red", "#F65A5A"},
+	{"green", "#00F100"},
+	{"yellow", "#EFEE04"},
+	{"blue", "#0F04E8"},
+	{"cyan", "#04E8E7"},
+	{"magenta", "#F75AF6"},
+	{"white", "#FFFFFF"},
+	{"gray", "#7E7E7E"},
+	{"brown", "#6E3C3C"},
 }
 
 var matchAllColorCodes = regexp.MustCompile(`(\^\d)`)
 
-var Ranks = map[int]string {
-	 1: "Private First Class",
-	 2: "Private First Class I",
-	 3: "Private First Class II",
-	 4: "Lance Corporal",
-	 5: "Lance Corporal I",
-	 6: "Lance Corporal II",
-	 7: "Corporal",
-	 8: "Corporal I",
-	 9: "Corporal II",
+var Ranks = map[int]string{
+	1:  "Private First Class",
+	2:  "Private First Class I",
+	3:  "Private First Class II",
+	4:  "Lance Corporal",
+	5:  "Lance Corporal I",
+	6:  "Lance Corporal II",
+	7:  "Corporal",
+	8:  "Corporal I",
+	9:  "Corporal II",
 	10: "Sergeant",
 	11: "Sergeant I",
 	12: "Sergeant II",
@@ -86,22 +86,22 @@ var Ranks = map[int]string {
 func getRegexpsFor(i int) (*regexp.Regexp, *regexp.Regexp) {
 	index := strconv.Itoa(i)
 
-	replaceColorCode := `\^` + index + `(.*?)(\^[^`+ index + `]|$)`
+	replaceColorCode := `\^` + index + `(.*?)(\^[^` + index + `]|$)`
 	cleanup := `\^` + index
 
 	return regexp.MustCompile(replaceColorCode), regexp.MustCompile(cleanup)
 }
 
 func Colorize(s string) string {
-	result := s;
+	result := s
 
 	for i, color := range Colors {
 		colorRegexp, cleanupRegexp := getRegexpsFor(i)
-		result = colorRegexp.ReplaceAllString(result, "<span style='color:" + color.Hex +";'>$1</span>$2")
+		result = colorRegexp.ReplaceAllString(result, "<span style='color:"+color.Hex+";'>$1</span>$2")
 		result = cleanupRegexp.ReplaceAllString(result, "")
 	}
 
-	return result;
+	return result
 }
 
 func StripFormat(s string) string {

@@ -1,20 +1,20 @@
 package main
 
 import (
-	"os"
-	"log"
 	"fmt"
-	"net/http"
 	"html/template"
+	"log"
+	"net/http"
+	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/spf13/viper"
 	"github.com/livingston/cod4-server-dashboard/parser"
+	"github.com/spf13/viper"
 )
 
 type Dashboard struct {
-	Title string
-	Game map[string]string
+	Title  string
+	Game   map[string]string
 	Server parser.Server
 }
 
@@ -31,14 +31,14 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("layout.html"))
 
 	game, server, err := parser.Parse(viper.GetString("gameserver.server_location") + "serverstatus.xml")
-    if err != nil {
-        fmt.Println(err)
-        os.Exit(1)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
 	data := Dashboard{
-		Title: "Dashboard",
-		Game: game,
+		Title:  "Dashboard",
+		Game:   game,
 		Server: server,
 	}
 
@@ -66,6 +66,6 @@ func main() {
 	r := newRouter()
 
 	if err := http.ListenAndServe(appAddress, r); err != nil {
-    	log.Fatal("ListenAndServe:", err)
-    }
+		log.Fatal("ListenAndServe:", err)
+	}
 }

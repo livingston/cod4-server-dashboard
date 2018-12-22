@@ -28,7 +28,7 @@ func TestRouterForNonExistentRoute(t *testing.T) {
 	r := newRouter()
 	mockServer := httptest.NewServer(r)
 
-	resp, err := http.Get(mockServer.URL+"/non-existent")
+	resp, err := http.Get(mockServer.URL + "/non-existent")
 
 	if err != nil {
 		t.Fatal(err)
