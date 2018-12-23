@@ -59,7 +59,7 @@ type Player struct {
 
 // RankText - returns the player's rank title
 func (p Player) RankText() string {
-	return utils.GetRankText(p.Rank)
+	return utils.GetRankTitle(p.Rank)
 }
 
 // Parse the serverstatus.xml file

@@ -93,8 +93,8 @@ func getRegexpsFor(i int) (*regexp.Regexp, *regexp.Regexp) {
 }
 
 // Colorize converts the game color codes into HTML colors
-func Colorize(s string) string {
-	result := s
+func Colorize(s string) (result string) {
+	result = s
 
 	for i, color := range colors {
 		colorRegexp, cleanupRegexp := getRegexpsFor(i)
@@ -102,20 +102,18 @@ func Colorize(s string) string {
 		result = cleanupRegexp.ReplaceAllString(result, "")
 	}
 
-	return result
+	return
 }
 
 // StripFormat removes all the color formatting
 func StripFormat(s string) string {
-	result := matchAllColorCodes.ReplaceAllString(s, "")
-
-	return result
+	return matchAllColorCodes.ReplaceAllString(s, "")
 }
 
-// GetRankText returns the title for the corresponding rank
-func GetRankText(rank int) string {
-	if rankText, ok := ranks[rank]; ok {
-		return rankText
+// GetRankTitle returns the title for the corresponding rank
+func GetRankTitle(rank int) string {
+	if rankTitle, ok := ranks[rank]; ok {
+		return rankTitle
 	}
 
 	return "Unknown"
