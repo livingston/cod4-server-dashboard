@@ -24,7 +24,7 @@
            <Data Name="sv_privateClients" Value="0"></Data>
            <Data Name="protocol" Value="17"></Data>
            <Data Name="_CoD4 X Site" Value="http://cod4x.me"></Data>
-           <Data Name="sv_hostname" Value="^7ÐÓ^4ÑÑ^1ÊÈÅ ^3ÍÅ ÑÄÀÞÒÑß ^2ÑÍÀÉÏÅÐÑÊÈÉ ÑÅÐÂÅÐ"></Data>
+           <Data Name="sv_hostname" Value="^7AAA^4BBB^1CCC ^3DD DDDDDDD ^2EEEEEEEEEEE EEEEEE"></Data>
            <Data Name="sv_minPing" Value="0"></Data>
            <Data Name="sv_maxPing" Value="400"></Data>
            <Data Name="sv_voice" Value="1"></Data>
@@ -42,31 +42,31 @@
      </Game>
      <Clients Total="27">
            <Client CID="0" ColorName="Ð¯ÑÐ½Ð¾...Ð±Ð°Ð½" DBID="76561198877043629" IP="46.180.4.17" ID="76561198877043629" Score="" Kills="" Deaths="" Assists="" Ping="" Team="" TeamName="Loading..." Updated="Thu Dec 20 20:27:33 2018" power="0" rank=""></Client>
-           <Client CID="1" ColorName="Starche" DBID="0" IP="62.33.206.72" ID="0" Score="100" Kills="1" Deaths="8" Assists="0" Ping="54" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="2" ColorName="kazak_rus" DBID="0" IP="212.3.150.34" ID="0" Score="0" Kills="0" Deaths="1" Assists="0" Ping="24" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="3" ColorName="fish" DBID="0" IP="178.92.46.2" ID="0" Score="500" Kills="5" Deaths="3" Assists="0" Ping="72" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="4" ColorName="The Lord BDF" DBID="76561198040726379" IP="90.91.248.6" ID="76561198040726379" Score="1000" Kills="10" Deaths="2" Assists="0" Ping="68" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="1" rank="55"></Client>
-           <Client CID="5" ColorName="ZM [20]" DBID="0" IP="46.187.20.195" ID="0" Score="0" Kills="0" Deaths="5" Assists="0" Ping="61" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="40"></Client>
+           <Client CID="1" ColorName="Starche" DBID="0" IP="62.33.206.72" ID="0" Score="100" Kills="1" Deaths="8" Assists="0" Ping="54" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="2" ColorName="kazak_rus" DBID="0" IP="212.3.150.34" ID="0" Score="0" Kills="0" Deaths="1" Assists="0" Ping="24" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="3" ColorName="fish" DBID="0" IP="178.92.46.2" ID="0" Score="500" Kills="5" Deaths="3" Assists="0" Ping="72" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="4" ColorName="The Lord BDF" DBID="76561198040726379" IP="90.91.248.6" ID="76561198040726379" Score="1000" Kills="10" Deaths="2" Assists="0" Ping="68" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="1" rank="55"></Client>
+           <Client CID="5" ColorName="ZM [20]" DBID="0" IP="46.187.20.195" ID="0" Score="0" Kills="0" Deaths="5" Assists="0" Ping="61" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="40"></Client>
            <Client CID="6" ColorName="PavliG" DBID="0" IP="94.29.21.229" ID="0" Score="" Kills="" Deaths="" Assists="" Ping="" Team="" TeamName="Loading..." Updated="Thu Dec 20 20:27:33 2018" power="0" rank=""></Client>
-           <Client CID="7" ColorName="onlyfausto" DBID="0" IP="212.204.134.249" ID="0" Score="200" Kills="2" Deaths="0" Assists="0" Ping="69" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="7" ColorName="onlyfausto" DBID="0" IP="212.204.134.249" ID="0" Score="200" Kills="2" Deaths="0" Assists="0" Ping="69" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
            <Client CID="8" ColorName="vit177rus" DBID="0" IP="92.243.181.45" ID="0" Score="0" Kills="0" Deaths="0" Assists="0" Ping="14" Team="3" TeamName="Spectator" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="9" ColorName="fenix" DBID="0" IP="212.87.160.146" ID="0" Score="0" Kills="0" Deaths="1" Assists="0" Ping="33" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="10" ColorName="|SF|GERMAN" DBID="0" IP="176.213.84.61" ID="0" Score="100" Kills="1" Deaths="1" Assists="0" Ping="27" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="9" ColorName="fenix" DBID="0" IP="212.87.160.146" ID="0" Score="0" Kills="0" Deaths="1" Assists="0" Ping="33" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="10" ColorName="|SF|GERMAN" DBID="0" IP="176.213.84.61" ID="0" Score="100" Kills="1" Deaths="1" Assists="0" Ping="27" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
            <Client CID="11" ColorName="EDUARD" DBID="0" IP="95.78.238.10" ID="0" Score="0" Kills="0" Deaths="0" Assists="0" Ping="38" Team="3" TeamName="Spectator" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
            <Client CID="12" ColorName="EksKLuZIV" DBID="0" IP="46.165.14.77" ID="0" Score="" Kills="" Deaths="" Assists="" Ping="" Team="" TeamName="Loading..." Updated="Thu Dec 20 20:27:33 2018" power="0" rank=""></Client>
-           <Client CID="13" ColorName="maks" DBID="0" IP="188.254.110.103" ID="0" Score="0" Kills="0" Deaths="0" Assists="0" Ping="21" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="14" ColorName="}|{y|{ 116rus" DBID="0" IP="89.250.167.244" ID="0" Score="2000" Kills="20" Deaths="1" Assists="0" Ping="28" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="17" ColorName="KUBA" DBID="0" IP="31.181.232.226" ID="0" Score="200" Kills="2" Deaths="6" Assists="0" Ping="109" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="18" ColorName="Hub" DBID="0" IP="201.250.66.68" ID="0" Score="500" Kills="5" Deaths="5" Assists="0" Ping="336" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="53"></Client>
-           <Client CID="20" ColorName="EZHIK" DBID="0" IP="85.117.93.34" ID="0" Score="400" Kills="4" Deaths="6" Assists="0" Ping="75" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="21" ColorName="E.S.A.U.L." DBID="0" IP="90.143.35.190" ID="0" Score="500" Kills="5" Deaths="11" Assists="0" Ping="115" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="22" ColorName="mAx" DBID="0" IP="91.236.179.29" ID="0" Score="200" Kills="2" Deaths="2" Assists="0" Ping="41" Team="1" TeamName="^2Ñïåöíàç" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="13" ColorName="maks" DBID="0" IP="188.254.110.103" ID="0" Score="0" Kills="0" Deaths="0" Assists="0" Ping="21" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="14" ColorName="}|{y|{ 116rus" DBID="0" IP="89.250.167.244" ID="0" Score="2000" Kills="20" Deaths="1" Assists="0" Ping="28" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="17" ColorName="KUBA" DBID="0" IP="31.181.232.226" ID="0" Score="200" Kills="2" Deaths="6" Assists="0" Ping="109" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="18" ColorName="Hub" DBID="0" IP="201.250.66.68" ID="0" Score="500" Kills="5" Deaths="5" Assists="0" Ping="336" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="53"></Client>
+           <Client CID="20" ColorName="EZHIK" DBID="0" IP="85.117.93.34" ID="0" Score="400" Kills="4" Deaths="6" Assists="0" Ping="75" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="21" ColorName="E.S.A.U.L." DBID="0" IP="90.143.35.190" ID="0" Score="500" Kills="5" Deaths="11" Assists="0" Ping="115" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="22" ColorName="mAx" DBID="0" IP="91.236.179.29" ID="0" Score="200" Kills="2" Deaths="2" Assists="0" Ping="41" Team="1" TeamName="^2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
            <Client CID="23" ColorName="PASHA51" DBID="0" IP="95.46.105.206" ID="0" Score="0" Kills="0" Deaths="0" Assists="0" Ping="37" Team="3" TeamName="Spectator" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="24" ColorName="Ruslan" DBID="0" IP="176.214.215.85" ID="0" Score="200" Kills="2" Deaths="3" Assists="0" Ping="55" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="25" ColorName="jamo" DBID="0" IP="213.87.152.90" ID="0" Score="400" Kills="4" Deaths="2" Assists="0" Ping="31" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="24" ColorName="Ruslan" DBID="0" IP="176.214.215.85" ID="0" Score="200" Kills="2" Deaths="3" Assists="0" Ping="55" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="25" ColorName="jamo" DBID="0" IP="213.87.152.90" ID="0" Score="400" Kills="4" Deaths="2" Assists="0" Ping="31" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
            <Client CID="26" ColorName="alx|crang" DBID="76561198012767648" IP="93.79.43.232" ID="76561198012767648" Score="0" Kills="0" Deaths="0" Assists="0" Ping="27" Team="3" TeamName="Spectator" Updated="Thu Dec 20 20:27:33 2018" power="1" rank="55"></Client>
            <Client CID="27" ColorName="|PS|PRAPOR72" DBID="0" IP="95.72.24.86" ID="0" Score="0" Kills="0" Deaths="0" Assists="0" Ping="6" Team="3" TeamName="Spectator" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
-           <Client CID="29" ColorName="Pitbull" DBID="0" IP="195.182.22.229" ID="0" Score="1100" Kills="11" Deaths="6" Assists="0" Ping="36" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="16"></Client>
-           <Client CID="30" ColorName="SniperUA" DBID="0" IP="62.122.222.129" ID="0" Score="400" Kills="4" Deaths="1" Assists="0" Ping="53" Team="2" TeamName="^3Ñ.À.Ñ" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
+           <Client CID="29" ColorName="Pitbull" DBID="0" IP="195.182.22.229" ID="0" Score="1100" Kills="11" Deaths="6" Assists="0" Ping="36" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="16"></Client>
+           <Client CID="30" ColorName="SniperUA" DBID="0" IP="62.122.222.129" ID="0" Score="400" Kills="4" Deaths="1" Assists="0" Ping="53" Team="2" TeamName="^3ï¿½.ï¿½.ï¿½" Updated="Thu Dec 20 20:27:33 2018" power="0" rank="55"></Client>
      </Clients>
 </B3Status>

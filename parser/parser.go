@@ -40,26 +40,31 @@ type team struct {
 
 // Player properties
 type Player struct {
-	XMLName  xml.Name `xml:"Client"`
-	ID       int      `xml:"CID,attr"`
-	Name     string   `xml:"ColorName,attr"`
-	IP       string   `xml:"IP,attr"`
-	GUID     string   `xml:"PBID,attr"`
-	Score    int      `xml:"Score,attr"`
-	Kills    int      `xml:"Kills,attr"`
-	Deaths   int      `xml:"Deaths,attr"`
-	Assists  int      `xml:"Assists,attr"`
-	Ping     int      `xml:"Ping,attr"`
-	Team     int      `xml:"Team,attr"`
-	TeamName string   `xml:"TeamName,attr"`
-	Rank     int      `xml:"rank,attr"`
-	Power    int      `xml:"power,attr"`
-	Updated  string   `xml:"Updated,attr"`
+	XMLName   xml.Name `xml:"Client"`
+	ID        int      `xml:"CID,attr"`
+	ColorName string   `xml:"ColorName,attr"`
+	IP        string   `xml:"IP,attr"`
+	GUID      string   `xml:"PBID,attr"`
+	Score     int      `xml:"Score,attr"`
+	Kills     int      `xml:"Kills,attr"`
+	Deaths    int      `xml:"Deaths,attr"`
+	Assists   int      `xml:"Assists,attr"`
+	Ping      int      `xml:"Ping,attr"`
+	Team      int      `xml:"Team,attr"`
+	TeamName  string   `xml:"TeamName,attr"`
+	Rank      int      `xml:"rank,attr"`
+	Power     int      `xml:"power,attr"`
+	Updated   string   `xml:"Updated,attr"`
 }
 
-// RankText - returns the player's rank title
-func (p Player) RankText() string {
+// RankTitle - returns the player's rank title
+func (p Player) RankTitle() string {
 	return utils.GetRankTitle(p.Rank)
+}
+
+// Name of the player colorised
+func (p Player) Name() template.HTML {
+	return template.HTML(utils.Colorize(p.ColorName))
 }
 
 // Parse the serverstatus.xml file
