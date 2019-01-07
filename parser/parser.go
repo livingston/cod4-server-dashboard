@@ -94,8 +94,8 @@ func Parse(file string) (map[string]string, Server, error) {
 
 	parsedData := make(map[string]string)
 
-	for i := 0; i < len(server.Game.MetaData); i++ {
-		parsedData[server.Game.MetaData[i].Key] = server.Game.MetaData[i].Value
+	for _, metaData := range server.Game.MetaData {
+		parsedData[metaData.Key] = metaData.Value
 	}
 
 	server.Teams = make(map[int]*team)
