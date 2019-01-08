@@ -34,8 +34,9 @@ type metaDatum struct {
 }
 
 type team struct {
-	TeamName template.HTML
-	Players  map[int]*Player
+	TeamName     template.HTML
+	Players      map[int]*Player
+	TotalPlayers int
 }
 
 // Player properties
@@ -120,6 +121,10 @@ func Parse(file string) (map[string]string, Server, error) {
 
 		currentPlayer := player
 		server.Teams[player.Team].Players[player.ID] = &currentPlayer
+	}
+
+	for _, team := range server.Teams {
+		team.TotalPlayers = len(team.Players)
 	}
 
 	server.FormattedName = template.HTML(utils.Colorize(parsedData["sv_hostname"]))
