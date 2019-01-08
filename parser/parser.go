@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"os"
 	"path/filepath"
+	"sort"
 
 	"github.com/livingston/cod4-server-dashboard/utils"
 	"golang.org/x/net/html/charset"
@@ -33,9 +34,12 @@ type metaDatum struct {
 	Value   string   `xml:"Value,attr"`
 }
 
+// Players is a List of players
+type Players map[int]*Player
+
 type team struct {
 	TeamName     template.HTML
-	Players      map[int]*Player
+	Players      Players
 	TotalPlayers int
 }
 
@@ -56,6 +60,21 @@ type Player struct {
 	Rank      int      `xml:"rank,attr"`
 	Power     int      `xml:"power,attr"`
 	Updated   string   `xml:"Updated,attr"`
+}
+
+// Len - Interface method for sort
+func (players Players) Len() int {
+	return len(players)
+}
+
+// Less - Interface method for sort
+func (players Players) Less(i, j int) bool {
+	return players[i].Score < players[j].Score
+}
+
+// Swap - Interface method for sort
+func (players Players) Swap(i, j int) {
+	players[i], players[j] = players[j], players[i]
 }
 
 // RankTitle - returns the player's rank title
@@ -100,6 +119,7 @@ func Parse(file string) (map[string]string, Server, error) {
 	}
 
 	server.Teams = make(map[int]*team)
+	playerIndices := make(map[int]int)
 
 	for _, player := range server.Players {
 		switch player.TeamName {
@@ -117,14 +137,22 @@ func Parse(file string) (map[string]string, Server, error) {
 			server.Teams[player.Team] = &team{}
 			server.Teams[player.Team].TeamName = template.HTML(utils.Colorize(player.TeamName))
 			server.Teams[player.Team].Players = make(map[int]*Player)
+
+			playerIndices[player.Team] = 0
 		}
 
 		currentPlayer := player
-		server.Teams[player.Team].Players[player.ID] = &currentPlayer
+		currentPlayerIndex := playerIndices[player.Team]
+
+		server.Teams[player.Team].Players[currentPlayerIndex] = &currentPlayer
+
+		playerIndices[player.Team]++
 	}
 
 	for _, team := range server.Teams {
 		team.TotalPlayers = len(team.Players)
+
+		sort.Sort(sort.Reverse(team.Players))
 	}
 
 	server.FormattedName = template.HTML(utils.Colorize(parsedData["sv_hostname"]))

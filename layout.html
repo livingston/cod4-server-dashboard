@@ -21,16 +21,15 @@
         <div class="team team-{{$teamId}}">
             <h2 class="team__header">{{$team.TeamName}} &nbsp; [ {{$team.TotalPlayers}} ]</h2>
             <ul class="players">
-            {{ range $playerId, $player := $team.Players }}
+            {{ range $team.Players }}
                 <li class="player">
-                    <span class="player__rank">{{$playerId}}</span>
-                    <span class="player__rank" title="{{$player.RankTitle}}">{{$player.Rank}}</span>
-                    <span class="player__name">{{$player.Name}}</span>
-                    <span class="player__score player__stat">{{$player.Score}}</span>
-                    <span class="player__kills player__stat">{{$player.Kills}}</span>
-                    <span class="player__deaths player__stat">{{$player.Deaths}}</span>
-                    <span class="player__assists player__stat">{{$player.Assists}}</span>
-                    <span class="player__ping player__stat">{{$player.Ping}}</span>
+                    <span class="player__rank" title="{{.RankTitle}}">{{.Rank}}</span>
+                    <span class="player__name">{{.Name}}</span>
+                    <span class="player__score player__stat">{{.Score}}</span>
+                    <span class="player__kills player__stat">{{.Kills}}</span>
+                    <span class="player__deaths player__stat">{{.Deaths}}</span>
+                    <span class="player__assists player__stat">{{.Assists}}</span>
+                    <span class="player__ping player__stat">{{.Ping}}</span>
                 </li>
             {{ end }}
             </ul>
